@@ -18,7 +18,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
         GITHUB_OWNER: ${{ github.repository_owner }}
-        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_REPO: ${{ github.event.repository.name }}
 
   upload:
     runs-on: ubuntu-latest
