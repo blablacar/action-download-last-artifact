@@ -17,6 +17,8 @@ jobs:
     - run: yarn test
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
+        GITHUB_OWNER: ${{ github.repository_owner }}
+        GITHUB_REPO: ${{ github.repository }}
 
   upload:
     runs-on: ubuntu-latest

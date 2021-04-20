@@ -14,7 +14,7 @@ steps:
 - uses: actions/checkout@v2
 
 - name: Download last artifact
-  uses: levonet/action-download-last-artifact@master
+  uses: blablacar/action-download-last-artifact@master
   with:
     name: my-artifact
 

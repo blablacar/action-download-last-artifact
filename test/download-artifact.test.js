@@ -50,8 +50,8 @@ describe('test getLastArtifactIdByName()', () => {
     beforeAll(() => {
         downloadArtifact = new DownloadArtifact('', '')
         downloadArtifact.repository = {
-            owner: 'levonet',
-            repo: 'action-download-last-artifact'
+            owner: getOwner() || 'blablacar',
+            repo: getRepository() || 'action-download-last-artifact'
         }
         if (getToken()) {
             downloadArtifact.client = github.getOctokit(getToken())
@@ -69,4 +69,12 @@ describe('test getLastArtifactIdByName()', () => {
 
 function getToken() {
     return process.env['GITHUB_TOKEN'] || ''
+}
+
+function getOwner() {
+    return process.env['GITHUB_OWNER'] || ''
+}
+
+function getRepository() {
+    return process.env['GITHUB_REPO'] || ''
 }
