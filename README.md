@@ -10,6 +10,10 @@ What is it for? For example:
 ## Example usage
 
 ```yml
+permissions:
+  actions: read
+  contents: read
+
 steps:
 - uses: actions/checkout@v2
 

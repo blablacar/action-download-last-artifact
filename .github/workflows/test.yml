@@ -11,7 +11,7 @@ jobs:
   unit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4.1.4
     - run: yarn install
     - run: yarn run lint
     - run: yarn test
@@ -28,7 +28,7 @@ jobs:
         echo ${GITHUB_SHA}
         echo ${GITHUB_SHA} > uploads/sha1
         echo ${GITHUB_SHA} > uploads/dir1/dir2/sha2
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4.3.3
       with:
         name: artifact
         path: uploads
@@ -37,7 +37,7 @@ jobs:
     needs: upload
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4.1.4
     - uses: ./
       with:
         name: artifact
