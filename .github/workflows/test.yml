@@ -28,7 +28,7 @@ jobs:
         echo ${GITHUB_SHA}
         echo ${GITHUB_SHA} > uploads/sha1
         echo ${GITHUB_SHA} > uploads/dir1/dir2/sha2
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: artifact
         path: uploads
