@@ -1,5 +1,8 @@
 # GitHub Action: Download last artifact
 
+> ⚠️ This code is no longer maintained.
+> This Action is not stable and we do not recommend its use.
+
 Downloads the last created artifact by name, regardless of which workflow or branch it was created in.
 
 What is it for? For example:
